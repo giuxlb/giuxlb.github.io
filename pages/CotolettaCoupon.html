@@ -1,8 +1,112 @@
 <!DOCTYPE html>
-<html>
-    <head>
-    </head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotoletta Ticket</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .ticket {
+            background: white;
+            width: 700px;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ticket::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40px;
+            height: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                #ff6b6b,
+                #ff6b6b 10px,
+                #ff8787 10px,
+                #ff8787 20px
+            );
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            color: #ff6b6b;
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .pizza-icon {
+            text-align: center;
+            margin: 20px 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+        .details {
+            margin: 20px 0;
+            padding: 10px;
+            border: 2px dashed #ff6b6b;
+            border-radius: 10px;
+        }
+
+        .details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .barcode {
+            text-align: center;
+            margin-top: 20px;
+            padding: 10px;
+            background: #f8f8f8;
+            border-radius: 5px;
+        }
+
+        .free-stamp {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff6b6b;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            transform: rotate(-15deg);
+            font-weight: bold;
+        }
+    </style>
+</head>
 <body>
-<h1>PROVA PROVA PROVA PROVA PROVA PROVA</h1>
+    <div class="ticket">
+        <div class="free-stamp">FREE</div>
+        <div class="header">
+            <h1>COTOLETTA TICKET</h1>
+            <p>Buono per una cotoletta offerta da Giuseppe =)</p>
+        </div>
+        
+        <div class="pizza-icon">
+            <img src="cotoletta.png" alt="Cotoletta Icon">
+        </div>
+
+        <div class="details">
+            <p><strong>Item:</strong> Cotoletta gigante</p>
+        </div>
+    </div>
 </body>
 </html>
